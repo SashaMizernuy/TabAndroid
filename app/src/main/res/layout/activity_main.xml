@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="200dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:id="@+id/people"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </HorizontalScrollView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="250dp">
+
+                <TabHost
+                    android:id="@+id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="250dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </TabWidget>
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+
+                                android:id="@+id/edTabContainer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:id="@+id/edTabContainer1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+
+
+                <!--<LinearLayout-->
+
+                    <!--android:id="@+id/edTextContainer"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addPeople"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_person_add" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabDelate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="150dp"
+        android:onClick="delPeople"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_delete"
+        android:layout_marginRight="40dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:onClick="changePeople"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_loop"
+        android:layout_marginRight="290dp"
+        />
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
